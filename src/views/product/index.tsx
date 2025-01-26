@@ -1,10 +1,14 @@
 import { productApi, ProductDetails } from "@/entities/product";
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const id = params.id;
-  const product = await productApi.getProduct({ id: params.id });
+export async function generateMetadata(
+  { params }: Props,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { id } = await params;
+  const product = await productApi.getProduct({ id });
 
   if (!product) {
     return {
@@ -39,11 +43,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export const ProductPage = async ({ params }: Props) => {
-  const product = await productApi.getProduct({ id: params.id });
+  const { id } = await params;
+  const product = await productApi.getProduct({ id });
 
   if (!product) {
     notFound();
