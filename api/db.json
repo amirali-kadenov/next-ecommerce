@@ -1,0 +1,184 @@
+{
+    "products": [
+        {
+          "id": 1,
+          "title": "Wireless Bluetooth Headphones",
+          "description": "High-quality wireless headphones with noise-cancellation and long battery life.",
+          "price": 99.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.5
+        },
+        {
+          "id": 2,
+          "title": "Stainless Steel Travel Mug",
+          "description": "Durable travel mug that keeps beverages hot or cold for hours.",
+          "price": 19.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.7
+        },
+        {
+          "id": 3,
+          "title": "Wireless Charging Pad",
+          "description": "Slim and fast wireless charging pad compatible with all Qi-enabled devices.",
+          "price": 29.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.3
+        },
+        {
+          "id": 4,
+          "title": "Smart Fitness Watch",
+          "description": "Feature-rich fitness watch with heart rate monitor and GPS tracking.",
+          "price": 149.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.6
+        },
+        {
+          "id": 5,
+          "title": "Portable Bluetooth Speaker",
+          "description": "Compact speaker with powerful sound and waterproof design.",
+          "price": 59.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.8
+        },
+        {
+          "id": 6,
+          "title": "Ergonomic Office Chair",
+          "description": "Adjustable office chair with lumbar support and breathable mesh back.",
+          "price": 199.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.4
+        },
+        {
+          "id": 7,
+          "title": "4K Ultra HD TV",
+          "description": "55-inch 4K smart TV with vivid colors and built-in streaming apps.",
+          "price": 499.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.7
+        },
+        {
+          "id": 8,
+          "title": "Gaming Laptop",
+          "description": "High-performance gaming laptop with NVIDIA graphics and RGB keyboard.",
+          "price": 1299.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.8
+        },
+        {
+          "id": 9,
+          "title": "Kitchen Knife Set",
+          "description": "Professional stainless steel kitchen knives with ergonomic handles.",
+          "price": 79.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.5
+        },
+        {
+          "id": 10,
+          "title": "Wireless Earbuds",
+          "description": "Compact and lightweight wireless earbuds with a charging case.",
+          "price": 49.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.6
+        },
+        {
+          "id": 11,
+          "title": "Coffee Maker",
+          "description": "Automatic drip coffee maker with programmable timer and reusable filter.",
+          "price": 69.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.2
+        },
+        {
+          "id": 12,
+          "title": "Smartphone",
+          "description": "Latest model smartphone with a stunning display and advanced camera features.",
+          "price": 999.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.9
+        },
+        {
+          "id": 13,
+          "title": "Electric Toothbrush",
+          "description": "Rechargeable electric toothbrush with multiple cleaning modes.",
+          "price": 39.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.4
+        },
+        {
+          "id": 14,
+          "title": "Yoga Mat",
+          "description": "Non-slip yoga mat with cushioning for extra comfort and support.",
+          "price": 29.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.3
+        },
+        {
+          "id": 15,
+          "title": "LED Desk Lamp",
+          "description": "Adjustable desk lamp with touch controls and multiple brightness levels.",
+          "price": 24.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.6
+        },
+        {
+          "id": 16,
+          "title": "Cast Iron Skillet",
+          "description": "Durable cast iron skillet perfect for stovetop or oven cooking.",
+          "price": 34.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.8
+        },
+        {
+          "id": 17,
+          "title": "Portable Hard Drive",
+          "description": "1TB external hard drive for secure and reliable data storage.",
+          "price": 59.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.5
+        },
+        {
+          "id": 18,
+          "title": "Air Fryer",
+          "description": "Compact air fryer with adjustable temperature and dishwasher-safe parts.",
+          "price": 89.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.7
+        },
+        {
+          "id": 19,
+          "title": "Backpack",
+          "description": "Water-resistant backpack with multiple compartments for organization.",
+          "price": 49.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.3
+        },
+        {
+          "id": 20,
+          "title": "Digital Camera",
+          "description": "Compact digital camera with 20MP resolution and optical zoom.",
+          "price": 299.99,
+          "currency": "USD",
+          "image": "https://media.istockphoto.com/id/1352881713/photo/mango-fruit-with-drops-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xNgofvhPOsksKtOMK9sbvQ2qZpMS6WQ3UC6Omv7g8-0=",
+          "rating": 4.6
+        }
+      ]
+}
