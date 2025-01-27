@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run server\" \"next dev\"",
-    "build": "concurrently \"npm run server\" \"next build\"",
+    "build": "next build",
     "start": "concurrently \"npm run server\" \"next start\"",
     "lint": "next lint",
     "server": "npx json-server api/db.json --port 3002",
