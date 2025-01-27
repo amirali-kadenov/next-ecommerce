@@ -1,40 +1,40 @@
-import React from "react";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import { ProductList } from "./product-list";
-import { Provider } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
-import { cartReducer } from "@/entities/cart";
-import { productApi } from "@/entities/product";
+// import React from "react";
+// import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+// import { ProductList } from "./product-list";
+// import { Provider } from "react-redux";
+// import { configureStore } from "@reduxjs/toolkit";
+// import { cartReducer } from "@/entities/cart";
+// import { productApi } from "@/entities/product";
 
 // Mock the API calls
 jest.mock("@/entities/product/model/api/product-api.ts");
 
-const mockProducts = [
-  {
-    id: 1,
-    title: "Product 1",
-    description: "Description 1",
-    price: 10,
-    currency: "$",
-    image: "/image1.jpg",
-    rating: 4.5,
-  },
-  {
-    id: 2,
-    title: "Product 2",
-    description: "Description 2",
-    price: 20,
-    currency: "$",
-    image: "/image2.jpg",
-    rating: 3.8,
-  },
-];
+// const mockProducts = [
+//   {
+//     id: 1,
+//     title: "Product 1",
+//     description: "Description 1",
+//     price: 10,
+//     currency: "$",
+//     image: "/image1.jpg",
+//     rating: 4.5,
+//   },
+//   {
+//     id: 2,
+//     title: "Product 2",
+//     description: "Description 2",
+//     price: 20,
+//     currency: "$",
+//     image: "/image2.jpg",
+//     rating: 3.8,
+//   },
+// ];
 
-const store = configureStore({
-  reducer: {
-    cart: cartReducer,
-  },
-});
+// const store = configureStore({
+//   reducer: {
+//     cart: cartReducer,
+//   },
+// });
 
 describe("ProductList", () => {
 //   beforeEach(() => {
