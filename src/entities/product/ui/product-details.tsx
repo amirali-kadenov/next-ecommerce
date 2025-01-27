@@ -2,6 +2,7 @@
 
 import { ProductRating } from "./product-rating";
 import { ProductButton } from "./product-button";
+import Image from "next/image";
 
 interface Product {
   id: number;
@@ -17,9 +18,11 @@ export function ProductDetails({ product }: { product: Product }) {
   return (
     <div className="grid md:grid-cols-2 gap-8">
       <div className="relative aspect-square">
-        <img
+        <Image
           src={product.image}
           alt={product.title}
+          width={400}
+          height={300}
           className="object-cover rounded-lg"
         />
       </div>
