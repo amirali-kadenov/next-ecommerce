@@ -40,7 +40,7 @@ export const ProductListInfiniteScroll = ({ initialProducts }: Props) => {
 
     setProducts([...products, ...nextProducts]);
 
-    if (nextProducts.length > 0) {
+    if (products.length >= DEFAULT_PRODUCTS_LIMIT) {
       setHasMore(true);
     } else {
       setHasMore(false);
@@ -54,7 +54,7 @@ export const ProductListInfiniteScroll = ({ initialProducts }: Props) => {
       scrollThreshold={0.7}
       dataLength={products.length}
       next={getNextProducts}
-      hasMore={hasMore && products.length >= DEFAULT_PRODUCTS_LIMIT}
+      hasMore={hasMore}
       loader={
         <ProductListSkeleton
           className="mt-6"
