@@ -6,11 +6,14 @@ export type StateSchema = {
   cart: CartSchema;
 };
 
-export const store = configureStore({
-  reducer: {
-    cart: cartReducer,
-  },
-});
+export const createStore = () =>
+  configureStore({
+    reducer: {
+      cart: cartReducer,
+    },
+  });
+
+export const store = createStore();
 
 type AppDispatch = typeof store.dispatch;
 
