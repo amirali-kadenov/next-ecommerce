@@ -6,7 +6,7 @@ import { getTruncatedText } from "../lib/get-truncated-text";
 import { ProductRating } from "./product-rating";
 import { ProductButton } from "./product-button";
 import Link from "next/link";
-import Image from "next/image";
+import { ProductImage } from "./product-image";
 
 interface ProductCardProps {
   product: Product;
@@ -17,14 +17,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     <Link href={`/product/${product.id}`}>
       <Card className="overflow-hidden">
         <div className="aspect-square relative">
-          <Image
-            src={product.image}
-            alt={product.title}
-            width={400}
-            height={300}
-            className="object-cover w-full"
-          />
-          
+          <ProductImage src={product.image} alt={product.title} />
         </div>
 
         <CardContent className="p-4">
