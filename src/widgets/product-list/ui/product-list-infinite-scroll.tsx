@@ -12,6 +12,7 @@ import { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ProductListSkeleton } from "./product-list-skeleton";
 import { useSearchParams } from "next/navigation";
+import { PRODUCT_LIST_TEST_IDS } from "../lib/constants";
 
 type Props = {
   initialProducts: Product[];
@@ -40,7 +41,7 @@ export const ProductListInfiniteScroll = ({ initialProducts }: Props) => {
 
     setProducts([...products, ...nextProducts]);
 
-    if (products.length >= DEFAULT_PRODUCTS_LIMIT) {
+    if (nextProducts.length === DEFAULT_PRODUCTS_LIMIT) {
       setHasMore(true);
     } else {
       setHasMore(false);
@@ -62,7 +63,7 @@ export const ProductListInfiniteScroll = ({ initialProducts }: Props) => {
         />
       }
     >
-      <ProductListContainer>
+      <ProductListContainer testId={PRODUCT_LIST_TEST_IDS.LIST}>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
