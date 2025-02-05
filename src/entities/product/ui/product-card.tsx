@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardFooter } from "@/shared/ui/card";
 import { Product } from "../model/api/types";
-import { getTruncatedText } from "../lib/utils";
+import { getTruncatedText } from "../lib/get-truncated-text";
 import { ProductRating } from "./product-rating";
 import { ProductButton } from "./product-button";
 import Link from "next/link";

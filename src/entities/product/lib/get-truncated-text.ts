@@ -5,6 +5,3 @@ export const getTruncatedText = (text: string, limit: number) => {
 
   return text;
 };
-
-export const delay = (timeout: number) =>
-  new Promise((resolve) => setTimeout(resolve, timeout));

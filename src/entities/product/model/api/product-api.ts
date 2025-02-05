@@ -1,13 +1,10 @@
 import { api } from "@/shared/api";
-import { delay } from "../../lib/utils";
 import { DEFAULT_PRODUCTS_LIMIT } from "../../lib/constants";
 import type { GetProductParams, GetProductsParams, Product } from "./types";
 
 export const productApi = {
   getProducts: async (params?: GetProductsParams) => {
     const { page, limit, search, order, sort } = params ?? {};
-
-    await delay(2000); // artificial delay
 
     try {
       const response = await api.get<Product[]>("products", {
