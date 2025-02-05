@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "concurrently \"npm run server\" \"next start\"",
     "lint": "next lint",
-    "server": "npx json-server api/db.json --port 3002",
+    "server": "npx json-server api/db.json --port 3002 --delay 1000",
     "test": "jest",
     "test:watch": "jest --watch"
   },
