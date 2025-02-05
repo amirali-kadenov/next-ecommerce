@@ -2,12 +2,15 @@
 
 import { Button } from "@/shared/ui/button";
 import { AlertCircle } from "lucide-react";
+import { PRODUCT_LIST_TEST_IDS } from "../lib/constants";
 
 export const ProductListError = () => {
-  const retry = () => {};
+  const retry = () => {
+    window.location.reload();
+  };
 
   return (
-    <div className="flex flex-col items-center justify-center h-[50vh] text-center">
+    <div data-testid={PRODUCT_LIST_TEST_IDS.ERROR} className="flex flex-col items-center justify-center h-[50vh] text-center">
       <AlertCircle className="w-16 h-16 text-destructive mb-4" />
       <h2 className="text-2xl font-semibold mb-2">
         Oops! Something went wrong
