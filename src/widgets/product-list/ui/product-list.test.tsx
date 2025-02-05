@@ -1,143 +1,60 @@
-// import React from "react";
-// import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-// import { ProductList } from "./product-list";
-// import { Provider } from "react-redux";
-// import { configureStore } from "@reduxjs/toolkit";
-// import { cartReducer } from "@/entities/cart";
-// import { productApi } from "@/entities/product";
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import { ProductList } from "./product-list";
+import { productApi } from "@/entities/product";
+import { PRODUCT_LIST_TEST_IDS } from "../lib/constants";
+import { Provider } from "react-redux";
+import { createStore } from "@/app/store";
 
-// Mock the API calls
-jest.mock("@/entities/product/model/api/product-api.ts");
-
-// const mockProducts = [
-//   {
-//     id: 1,
-//     title: "Product 1",
-//     description: "Description 1",
-//     price: 10,
-//     currency: "$",
-//     image: "/image1.jpg",
-//     rating: 4.5,
-//   },
-//   {
-//     id: 2,
-//     title: "Product 2",
-//     description: "Description 2",
-//     price: 20,
-//     currency: "$",
-//     image: "/image2.jpg",
-//     rating: 3.8,
-//   },
-// ];
-
-// const store = configureStore({
-//   reducer: {
-//     cart: cartReducer,
-//   },
-// });
+jest.mock("@/entities/product/model/api/product-api.ts", () => ({
+  productApi: {
+    getProducts: jest.fn(),
+  },
+}));
 
 describe("ProductList", () => {
-//   beforeEach(() => {
-//     jest.clearAllMocks();
-//     (productApi.getProducts as jest.Mock).mockResolvedValue(mockProducts);
-//   });
+  it("renders ProductListError when products is null when there is an error", async () => {
+    (productApi.getProducts as jest.Mock).mockResolvedValue(null);
 
-//   it("renders product list and allows sorting and searching", async () => {
-//     render(
-//       <Provider store={store}>
-//         <ProductList />
-//       </Provider>
-//     );
+    render(await ProductList({}));
 
-//     // Wait for products to load
-//     await waitFor(() => {
-//       expect(screen.getByText("Product 1")).toBeInTheDocument();
-//       expect(screen.getByText("Product 2")).toBeInTheDocument();
-//     });
+    expect(
+      await screen.findByTestId(PRODUCT_LIST_TEST_IDS.ERROR)
+    ).toBeInTheDocument();
+  });
 
-//     // Check if sorting options are present
-//     expect(screen.getByText("Sort by")).toBeInTheDocument();
-//     expect(screen.getByText("Order")).toBeInTheDocument();
+  it("renders ProductListEmpty when products is an empty array", async () => {
+    (productApi.getProducts as jest.Mock).mockResolvedValue([]);
 
-//     // Check if search input is present
-//     const searchInput = screen.getByPlaceholderText("Search products...");
-//     expect(searchInput).toBeInTheDocument();
+    render(await ProductList({}));
 
-//     // Test search functionality
-//     fireEvent.change(searchInput, { target: { value: "Product 1" } });
-//     await waitFor(() => {
-//       expect(api.getProducts).toHaveBeenCalledWith(
-//         1,
-//         "price",
-//         "asc",
-//         "Product 1"
-//       );
-//     });
+    expect(
+      await screen.findByTestId(PRODUCT_LIST_TEST_IDS.EMPTY)
+    ).toBeInTheDocument();
+  });
 
-//     // Test sorting functionality
-//     const sortBySelect = screen.getByText("Sort by");
-//     fireEvent.click(sortBySelect);
-//     fireEvent.click(screen.getByText("Rating"));
-//     await waitFor(() => {
-//       expect(api.getProducts).toHaveBeenCalledWith(
-//         1,
-//         "rating",
-//         "asc",
-//         "Product 1"
-//       );
-//     });
+  it("renders ProductListInfiniteScroll when products is a non-empty array", async () => {
+    const products = [
+      {
+        id: 1,
+        title: "Wireless Bluetooth Headphones",
+        description:
+          "High-quality wireless headphones with noise-cancellation and long battery life.",
+        price: 99.99,
+        currency: "USD",
+        image: null,
+        rating: 4.5,
+      },
+    ];
 
-//     const orderSelect = screen.getByText("Order");
-//     fireEvent.click(orderSelect);
-//     fireEvent.click(screen.getByText("Descending"));
-//     await waitFor(() => {
-//       expect(api.getProducts).toHaveBeenCalledWith(
-//         1,
-//         "rating",
-//         "desc",
-//         "Product 1"
-//       );
-//     });
-//   });
+    (productApi.getProducts as jest.Mock).mockResolvedValue(products);
 
-//   it("renders loading state", () => {
-//     (api.getProducts as jest.Mock).mockReturnValueOnce(new Promise(() => {}));
-//     render(
-//       <Provider store={store}>
-//         <ProductList />
-//       </Provider>
-//     );
+    const jsx = await ProductList({});
 
-//     expect(screen.getAllByTestId("product-card-skeleton")).toHaveLength(8);
-//   });
+    render(<Provider store={createStore()}>{jsx}</Provider>);
 
-//   it("renders empty state when no products are found", async () => {
-//     (api.getProducts as jest.Mock).mockResolvedValueOnce([]);
-//     render(
-//       <Provider store={store}>
-//         <ProductList />
-//       </Provider>
-//     );
-
-//     await waitFor(() => {
-//       expect(screen.getByText("No products found")).toBeInTheDocument();
-//     });
-//   });
-
-//   it("renders error state when API call fails", async () => {
-//     (api.getProducts as jest.Mock).mockRejectedValueOnce(
-//       new Error("API error")
-//     );
-//     render(
-//       <Provider store={store}>
-//         <ProductList />
-//       </Provider>
-//     );
-
-//     await waitFor(() => {
-//       expect(
-//         screen.getByText("Oops! Something went wrong")
-//       ).toBeInTheDocument();
-//     });
-//   });
+    await expect(
+      screen.getByTestId(PRODUCT_LIST_TEST_IDS.LIST)
+    ).toBeInTheDocument();
+  });
 });
